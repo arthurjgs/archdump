@@ -2,6 +2,8 @@
 
 hwclock --systohc
 sudo pacman -Sy dialog netctl dhclient wpa_supplicant wireless_tools
+sudo pacman -Sy networkmanager
+systemctl enable NetworkManager
 sudo pacman -Sy efibootmgr grub os-prober --noconfirm
 sudo pacman -Syu --noconfirm --needed
 echo sins-work > /etc/hostname
