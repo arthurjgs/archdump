@@ -2,8 +2,6 @@
 
 hwclock --systohc
 sudo pacman -Sy dialog netctl dhclient wpa_supplicant wireless_tools
-sudo pacman -Sy networkmanager
-systemctl enable NetworkManager
 sudo pacman -Sy efibootmgr grub os-prober --noconfirm
 sudo pacman -Syu --noconfirm --needed
 echo sins-work > /etc/hostname
@@ -20,3 +18,5 @@ useradd -m  -G wheel,users -s /bin/bash sins
 echo "sins ALL=(ALL) ALL" >> /etc/sudoers
 grub-install --target=x86_64-efi --efi-directory=/boot/efi --bootloader-id=GRUB --removable
 grub-mkconfig -o /boot/grub/grub.cfg
+exit
+echo "NOW EXECUTE install package.sh"
